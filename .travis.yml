@@ -9,3 +9,16 @@ before_install:
 
 script:
   - docker run -e CI=true irahulsah/react-docker-website npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "react-docker-sample-intrgation"
+  env: "react-docker-sample-intrgation-env"
+  bucket_name: "elasticbeanstalk-us-east-1-369894276719"
+  bucket_path: "react-docker-sample-intrgation"
+  on:
+    branch: master 
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
