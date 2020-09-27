@@ -8,4 +8,4 @@ before_install:
 
 
 script:
-  - docker run irahulsah/react-docker-website npm run test -- --coverage
+  - docker run -e CI=true irahulsah/react-docker-website npm run test
