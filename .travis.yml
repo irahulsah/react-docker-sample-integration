@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t irahulsah/react-docker-website -f Dockerfile.dev .
+
+
+script:
+  - docker run irahulsah/react-docker-website npm run test -- --coverage
