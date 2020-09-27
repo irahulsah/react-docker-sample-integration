@@ -14,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "react-docker-sample-intrgation"
-  env: "react-docker-sample-intrgation-env"
+  env: "ReactDockerSampleIntrgation-env"
   bucket_name: "elasticbeanstalk-us-east-1-369894276719"
   bucket_path: "react-docker-sample-intrgation"
   on:
